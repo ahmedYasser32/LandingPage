@@ -1,10 +1,13 @@
-# LandingPage Project
-# Languages used HTML,JS,CSS
-# Introduction 
+# Landing Page Project
 
-This project is the 1st project of the  udacity web professional track nano degree, and it's a scholarship from
-Egypt-fwd initiative.
+## Table of Contents
 
-# Description
-The project contains a navigation bar that navigates through sections, the list inside the navBar is dynamic and it navigate to each section by scrolling to it
-also when the user enter the top of the view port of any section the color of the section head changes into purple.
+* [Instructions](#instructions)
+
+## Instructions
+
+The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+
+To get started, open `js/app.js` and start building out the app's functionality
+
+For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
