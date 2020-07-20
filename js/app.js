@@ -17,21 +17,14 @@
  * Define Global Variables
  * 
 */
-const Navmenu = document.getElementsByClassName("navbar__menu");
+
 const NavList =document.getElementById("navbar__list");
 const sections= document.querySelectorAll('section');
 
 
 /**
  * End Global Variables
- * Start Helper Functions
- * 
-*/
 
-
-
-/**
- * End Helper Functions
  * Begin Main Functions
  * 
 */
@@ -53,7 +46,7 @@ const sections= document.querySelectorAll('section');
     behavior:"smooth"
    });
   });
-  // Scroll to section on link click
+
 
   NavList.appendChild(LFrag);
 
@@ -61,16 +54,16 @@ const sections= document.querySelectorAll('section');
  }
 }
 
- //build the event
+ //build the event to know when the user is on top of viewport and control the active  class
 function buildevents() {
  sections.forEach(section => {
   section.addEventListener('mouseover', event => {
    //handle click
 // Add class 'active' to section when near top of viewport
    section.classList.toggle("your-active-class");
-
   })
  });
+ 
  sections.forEach(section => {
   section.addEventListener('mouseout', event => {
    //handle click
@@ -82,20 +75,11 @@ function buildevents() {
  }
 
 
-
-
-
-// Scroll to anchor ID using scrollTO event
-function scrollto(){
-
-}
-
 /**
  * End Main Functions
  * Begin Events
  * 
 */
-
 // Build navigation menu
 document.addEventListener('DOMContentLoaded', (buildnavBar()));
 //begin the events that set and remove active class
