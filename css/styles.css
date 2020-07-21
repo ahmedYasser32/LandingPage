@@ -66,28 +66,28 @@ section {
 /* Navigation Styles*/
 .navbar__menu ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+    text-align: center;
     background-color: mediumpurple ;
-    width: auto;
-    height:60px;
+    color: mediumpurple;
+height: 40px;
 }
 
 .navbar__menu li {
-    display: inline;
+    display: inline-flex;
 
+    background-color: mediumpurple;
 }
 .menu__link{
 
     color: black;
 }
 .navbar__menu .menu__link {
-    display: block;
+    display: inline-block;
     padding: 1em;
     font-weight: bold;
     float: left;
-    height: 60px;
+
+    color: mediumpurple;
 }
 a{
 
@@ -95,6 +95,7 @@ a{
     color: black;
 
 }
+
 a:hover{
     color:darkblue;
 
@@ -106,11 +107,12 @@ a:hover{
 
 /* Header Styles */
 .page__header {
-    background: #fff;
+    background: mediumpurple;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 5;
+
 }
 
 /* Footer Styles */
@@ -210,7 +212,13 @@ section:nth-of-type(3n + 1) .landing__container::after {
 /* Section Active Styles */
 /* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
 section.your-active-class {
+    background-color: mediumpurple;
+    opacity: 75% ;
+    font-weight: bolder;
 
+}
+section.your-active-class p {
+    color: black;
 }
 
 
@@ -220,8 +228,7 @@ section.your-active-class .landing__container::before {
 }
 section.your-active-class h2
 {
-    color: blueviolet;
-
+    color: black;
 }
 
 section.your-active-class .landing__container::after {
