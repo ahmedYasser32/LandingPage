@@ -2,8 +2,8 @@
  *
  * CSS written based on SMACSS architecture.
  * To learn more, visit: http://smacss.com/
- * 
- * For simplicity, no reset or normalize is added. 
+ *
+ * For simplicity, no reset or normalize is added.
  * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
  *
 */
@@ -69,7 +69,7 @@ section {
     text-align: center;
     background-color: mediumpurple ;
     color: mediumpurple;
-height: 40px;
+    height: 40px;
 }
 
 .navbar__menu li {
@@ -100,10 +100,7 @@ a:hover{
     color:darkblue;
 
 }
-.navbar__menu .menu__link:hover {
-    background: lightblue;
 
-}
 
 /* Header Styles */
 .page__header {
@@ -144,7 +141,7 @@ a:hover{
 section:nth-of-type(even) .landing__container {
     margin-right: 0;
     margin-left: auto;
-    text-align: right; 
+    text-align: right;
 }
 
 /* Background Circles */
@@ -221,6 +218,10 @@ section.your-active-class p {
     color: black;
 }
 
+ li.your-active-class {
+
+    background-color: greenyellow;
+}
 
 section.your-active-class .landing__container::before {
     opacity: 1;
@@ -239,14 +240,14 @@ section.your-active-class .landing__container::after {
 
 /* Section Active Styles Keyframe Animations */
 @keyframes rotate {
-	from {
-		transform: rotate(0deg)
-		           translate(-1em)
-		           rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg)
-		           translate(-1em) 
-		           rotate(-360deg);
-	}
+    from {
+        transform: rotate(0deg)
+        translate(-1em)
+        rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg)
+        translate(-1em)
+        rotate(-360deg);
+    }
 }
