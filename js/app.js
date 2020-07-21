@@ -1,21 +1,21 @@
 /**
- * 
+ *
  * Manipulating the DOM exercise.
  * Exercise programmatically builds navigation,
  * scrolls to anchors from navigation,
  * and highlights section in viewport upon scrolling.
- * 
+ *
  * Dependencies: None
- * 
+ *
  * JS Version: ES2015/ES6
- * 
+ *
  * JS Standard: ESlint
- * 
+ *
 */
 
 /**
  * Define Global Variables
- * 
+ *
 */
 
 const NavList =document.getElementById("navbar__list");
@@ -26,7 +26,7 @@ const sections= document.querySelectorAll('section');
  * End Global Variables
 
  * Begin Main Functions
- * 
+ *
 */
 
 // build the nav
@@ -56,38 +56,23 @@ const sections= document.querySelectorAll('section');
 
  //build the event to know when the user is on top of viewport and control the active  class
 function buildevents() {
- sections.forEach(section => {
-  section.addEventListener('mouseover', event => {
-   //handle click
-// Add class 'active' to section when near top of viewport
-   section.classList.toggle("your-active-class");
-  })
- });
- 
- sections.forEach(section => {
-  section.addEventListener('mouseout', event => {
-   //handle click
-// Add class 'active' to section when near top of viewport
-   section.classList.toggle("your-active-class");
 
-  })
- });
- }
+    sections.forEach(section => {
 
-
+        const entry = Math.floor(section.getBoundingClientRect().top);
+        
+        section.classList.toggle('your-active-class',false)
+        if (entry <280 && entry >= -280){
+            section.classList.add('your-active-class',true);
+        }
+            })
+                  }
 /**
  * End Main Functions
  * Begin Events
- * 
+ *
 */
 // Build navigation menu
 document.addEventListener('DOMContentLoaded', (buildnavBar()));
-//begin the events that set and remove active class
-buildevents();
-
-
-
-
-
-
-
+//begin the events that set and remove active class and know which class you are scrolling on
+window.addEventListener("scroll", buildevents);
